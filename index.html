@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhantomPen - Ghost Writer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #764ba2;
+            margin-bottom: 30px;
+        }
+        .input-section, .output-section {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        #output {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            min-height: 150px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>👻 PhantomPen - Ghost Writer</h1>
+        
+        <div class="input-section">
+            <label for="persona">Writing Persona:</label>
+            <select id="persona">
+                <option value="professional">Professional</option>
+                <option value="casual">Casual</option>
+                <option value="academic">Academic</option>
+                <option value="creative">Creative</option>
+                <option value="technical">Technical</option>
+            </select>
+        </div>
+        
+        <div class="input-section">
+            <label for="tone">Tone:</label>
+            <select id="tone">
+                <option value="neutral">Neutral</option>
+                <option value="enthusiastic">Enthusiastic</option>
+                <option value="formal">Formal</option>
+                <option value="friendly">Friendly</option>
+                <option value="persuasive">Persuasive</option>
+            </select>
+        </div>
+        
+        <div class="input-section">
+            <label for="topic">Topic/Subject:</label>
+            <input type="text" id="topic" placeholder="Enter the topic you want to write about">
+        </div>
+        
+        <div class="input-section">
+            <label for="length">Desired Length:</label>
+            <select id="length">
+                <option value="short">Short (1-2 paragraphs)</option>
+                <option value="medium" selected>Medium (3-4 paragraphs)</option>
+                <option value="long">Long (5+ paragraphs)</option>
+            </select>
+        </div>
+        
+        <div class="input-section">
+            <label for="keywords">Keywords (optional):</label>
+            <input type="text" id="keywords" placeholder="Enter keywords separated by commas">
+        </div>
+        
+        <button onclick="generateContent()">Generate Content</button>
+        
+        <div class="output-section">
+            <label for="output">Generated Content:</label>
+            <div id="output">Your generated content will appear here...</div>
+        </div>
+    </div>
+    
+    <script src="ghostwriter.js"></script>
+</body>
+</html>
